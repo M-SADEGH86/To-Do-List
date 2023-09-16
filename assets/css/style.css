@@ -1,0 +1,109 @@
+@font-face {
+    font-family: iransans;
+    src: url(../font/IRANSansWeb.ttf) format("truetype");
+}
+*{
+    font-family: iransans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw ;
+    height: 100vh ;
+    background: linear-gradient(135deg , #153677 , #4e085f);
+    display: flex ;
+    justify-content: center;
+    align-items: start;
+}
+.container {
+    width: 600px ;
+    background-color: white ;
+    border-radius: 1.25rem;
+    padding: 20px ;
+    margin-top: 30px;
+}
+.container > h2 {
+    font-weight: bold ;
+    font-size: 25px ;
+    display: flex; 
+    align-items: center;
+}
+.container > h2 > img {
+    width: 50p x;
+    height: 50px ;
+    margin-left: 10px ;
+}
+.search-box {
+    width: 100% ;
+    height: 50px ;
+    display: flex ;
+    align-items: center;
+    margin-top: 10px ;
+    background-color: #ecedef;
+    border-radius: 1000px;
+}
+.search-box input {
+    width: 80% ;
+    border: none ;
+    outline: none ;
+    margin-left: 15px ;
+    background-color: #ecedef;
+    font-size: 17px;
+}
+.search-box button {
+    width: 20% ;
+    height: 100%;
+    border-radius: 1000px;
+    background-color: #fe643a;
+    border: none ;
+    outline: none ;
+    color: white;
+    font-size: 17px ;
+    cursor: pointer;
+}
+.container-list {
+    margin-top: 10px ;
+}
+.container-list li {
+    position: relative;
+    list-style-type: none ;
+    font-size: 20px ;
+    padding: 15px 45px;
+    user-select: none ;
+    cursor : pointer;
+}
+.container-list li::before {
+    content: '';
+    position: absolute;
+    width: 25px ;
+    height: 25px ;
+    border-radius: 100% ;
+    background-image: url(../image/unchecked.png);
+    background-size: cover ;
+    background-position: center;
+    top: 17px;
+    left: 10px ;
+}
+.container-list li.checked {
+    color: #555 ;
+    text-decoration: line-through;
+}
+.container-list li.checked::before {
+    background-image: url(../image/checked.png);
+}
+.container-list li span {
+    position: absolute;
+    right: 0 ;
+    top: 9px ;
+    width: 40px ;
+    height: 40px ;
+    border-radius: 100%;
+    display: flex ;
+    justify-content: center ;
+    align-items: center;
+    font-size: 22px;
+}
+.container-list li span:hover {
+    background-color: #edeef0;
+}
